@@ -15,14 +15,24 @@
         Storage Firebase BETA
       </h1>
       <p class="lead">
-        Un servicio de almacenamiento de imágenes gratis de Angular
+        Un servicio de almacenamiento de imágenes gratis en Angular
       </p>
       <div>
         <input
+          (change)="subirArchivo($event)"
           class="form-control form-control-lg"
           id="formFileLg"
           type="file"
         />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div *ngFor="let image of images" class="col">
+      <div class="card">
+        <img [src]="image" class="card-img-top" alt="..." />
       </div>
     </div>
   </div>
